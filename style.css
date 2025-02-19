@@ -1,0 +1,716 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Grandstander:ital,wght@0,100..900;1,100..900&family=Oxanium:wght@200..800&family=Pacifico&display=swap');
+html {
+    scroll-behavior: smooth;
+}
+
+body {    
+    font-family: "Grandstander", serif !important;
+    background-color: whitesmoke;
+    margin: 0;
+    position: relative;
+}
+
+    /* Header */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #d9e2ef; 
+    width: 100%;
+    height: 80px;
+}
+
+.logo {
+    margin-left: 15%;
+}
+
+.logo h1 {
+    color: cornflowerblue;
+    font-size: 36px;
+    margin-right: 15%;
+}
+
+.logo span {
+    color: darkslateblue;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    list-style: none;
+    padding: 0;
+    font-size: 20px;
+}
+
+.menu li a {
+    position: relative;
+    text-decoration: none;
+    color: darkslateblue;
+    transition: 0.5s;
+    padding-bottom: 5px;
+}
+
+.menu li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    background-color: cornflowerblue;
+    transition: width 0.5s ease-in-out, left 0.5s ease-in-out;
+}
+
+.menu li a:hover {
+    color: cornflowerblue;
+    font-size: 24px;
+}
+
+.menu li a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+.buttonHeader {
+    display: flex;
+    align-items: center;
+    margin-right: 15%;
+}
+
+.buttonHeader button {
+    padding: 15px 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: darkslateblue;
+    text-decoration: 0;
+    transition: 0.5s;
+}
+
+.buttonHeader button a {
+    text-decoration: 0;
+    font-family: "Grandstander", serif;
+    font-size: 18px;
+    color: whitesmoke;
+}
+
+.buttonHeader button:hover {
+    background-color: cornflowerblue;
+    transform: translateY(-4px);
+}
+
+    /* Home */
+
+#home {
+    display: flex;
+    justify-content: center;
+    margin: 100px 15% 0 15%;
+}
+
+#home .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 28px;
+}
+
+#home .right {
+    flex: 1;
+}
+
+#home .left h1, h2 {
+    margin: 0;
+    color: rgb(45, 45, 45);
+}
+
+#home .left h1 span {
+    color: cornflowerblue;
+}
+
+#home .left p {
+    font-size: 20px;
+    color: grey;
+}
+
+#home .left .buttonsHome {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 20px 25px;
+    border: none;
+    border-radius: 10px;
+}
+
+#home .left .buttonsHome button {
+    padding: 20px 40px;
+    border: none;
+    border-radius: 10px;
+    background-color: darkslateblue;
+    transition: 0.5s;
+}
+
+#home .left .buttonsHome button a {
+    color: whitesmoke;
+    text-decoration: 0;
+    font-size: 18px;
+    white-space: nowrap;
+}
+
+#home .left .buttonsHome .btn1 {
+    transition: 0.5s;
+}
+
+#home .left .buttonsHome .btn2 {
+    background-color: cornflowerblue;
+    transition: 0.5s;
+}
+
+#home .left .buttonsHome .btn1:hover {
+    background-color: rgba(71, 61, 139, 0.8);
+    transform: translateY(-5px);
+
+}
+
+#home .left .buttonsHome .btn2:hover {
+    background-color: rgba(100, 148, 237, 0.8);
+    transform: translateY(-5px);
+}
+
+
+    /* Qualities */
+
+#qualities {
+    display: flex;
+    justify-content: space-around;
+    margin: 80px 15% 0 15%;
+    gap: 30px;
+}
+
+#qualities .part {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+#qualities .part i {
+    font-size: 40px;
+    color: darkslateblue;
+}
+
+#qualities .part h4 {
+    font-size: 22px;
+    font-weight: 500;
+    margin: 20px 0 0 0;
+    color: rgb(45, 45, 45);
+}
+
+#qualities .part p {
+    font-size: 16px;
+    color: gray;
+}
+
+    /* Bannière */
+
+#banniere {
+    border: 1px solid rgba(128, 128, 128, 0.2);
+    margin-top: 80px;
+    padding: 25px;
+}
+
+.marquee-container {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+}
+        
+.marquee-text {
+    display: inline-block;
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(45, 45, 45);
+    animation: marquee 10s linear infinite;
+}
+    
+@keyframes marquee {
+    0% { transform: translateX(300%); }
+    100% { transform: translateX(-100%); }
+}
+    
+.lo {
+    color: darkslateblue;
+}
+    
+.go {
+    color: cornflowerblue;
+}
+
+    /* Présentation */
+
+#presentation {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 80px 15% 0 15%;
+    gap: 30px;
+}
+    
+#presentation .left {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 10%;
+}
+        
+#presentation .left .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Pour centrer les inputs */
+    padding: 20px;
+    border-radius: 10px;
+    height: auto; /* Ajustement dynamique */
+    gap: 15px;
+    background-color: rgba(241, 241, 241, 0.2);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    transition: 0.5s;
+}
+
+#presentation .left .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+}
+    
+#presentation .left .card img {
+    border-radius: 10px 10px 0 0;
+    width: 100%;
+    max-height: 250px;
+    object-fit: cover;
+}
+    
+/* Ajustement des styles pour le form-floating */
+
+.form-floating {
+    position: relative;
+    width: 100%;
+}
+    
+.form-floating input {
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 16px;
+    background-color: whitesmoke;
+    box-sizing: border-box; /* Évite les débordements */
+}
+    
+.form-floating label {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    border-radius: 10px;
+    color: gray;
+    font-size: 14px;
+    transition: 0.3s ease;
+    pointer-events: none; /* Empêche l'interaction directe */
+}
+
+#presentation .left .card button {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid cornflowerblue;
+    border-radius: 10px;
+    font-size: 16px;
+    box-sizing: border-box;
+    background-color: cornflowerblue;
+    transition: 0.5s;
+}
+
+#presentation .left .card button a {
+    text-decoration: 0;
+    color: whitesmoke;
+}
+
+#presentation .left .card button:hover {
+    background-color: rgba(100, 148, 237, 0.8);
+    transform: translateY(-5px);
+}
+
+#presentation .right {
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+    flex: 1.5;
+    justify-content: center;
+}
+
+#presentation .right h2 {
+    font-size: 38px;
+    background-color: rgba(241, 241, 241, 0.2);
+}
+
+/* typing text */
+
+.animated-text{
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 280px;
+}
+
+.animated-text span{
+    position: relative;
+}
+
+.animated-text span::before{
+    content: "";
+    color: cornflowerblue;
+    animation: words 20s infinite;
+}
+
+.animated-text span::after{
+    content: "";
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 120%;
+    background-color: white;
+    border-left: 2px solid cornflowerblue;
+    right: -8px;
+    animation: cursor 0.8s infinite, typing 20s steps(14) infinite;
+}
+
+@keyframes cursor {
+    to{
+        border-left: 4px solid #ff7f5000;
+    }
+}
+
+@keyframes words {
+    0%,20%{
+        content: "les parents";
+    }
+    21%,40%{
+        content: "les frères";
+    }
+    41%,60%{
+        content: "les soeurs";
+    }
+    61%,100%{
+        content: "n'importe qui";
+    }
+}
+
+@keyframes typing {
+    10%,15%,30%,35%,50%,55%,70%,75%,90%,95%{
+        width: 0;
+    }
+    5%,20%,25%,40%,45%,60%,65%,80%,85%{
+        width: calc(100% + 8px);
+    }
+}
+
+    /* suite présentation */
+
+#presentation .about {
+    display: flex;
+    margin-right: 10%;
+    font-size: 20px;
+    color: gray;
+    flex-wrap: wrap;
+}
+
+#presentation .about li {
+    display: flex;
+    flex-direction: row;
+    color: darkslateblue;
+    list-style: none;
+    width: 50%;
+    transition: 0.5s;
+}
+
+#presentation .about li i {
+    margin-right: 10px;
+}
+
+#presentation .about li:hover {
+    color: cornflowerblue;
+}
+
+    /* Réseaux */
+
+#reseaux {
+    margin: 100px 15% 0 15%;
+    display: flex;
+    flex-direction: column;
+}
+
+#reseaux .top {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 80px 20% 80px 20%;
+}
+
+#reseaux .top h1 {
+    font-size: 28px;
+    color: rgb(45, 45, 45);
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+}
+
+#reseaux .top p {
+    font-size: 16px;
+    color: gray;
+}
+
+#reseaux .bottom {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border-radius: 10px;
+    width: 80%;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px;    
+    height: auto; /* Permet d'ajuster la hauteur à l'image */
+    overflow: hidden; /* Évite tout débordement */
+    transition: 0.5s;
+}
+
+#reseaux .bottom .instagram, .discord {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: stretch;
+    width: 100%;
+    height: 300px;
+    position: relative;
+    transition: 1s ease, transform 1s ease;
+}
+
+.discord {
+    position: absolute;
+    visibility: hidden;
+}
+
+#reseaux .bottom img {
+    border-radius: 0 0 0 0;
+    max-width: 300px;
+    clip-path: ellipse(100% 200% at 0% 25%); /* Crée un arc circulaire du côté gauche */
+    transition: 0.5s;
+}
+
+#reseaux .bottom .elements {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 5% 0 5%;
+    transition: 0.5s;
+}
+
+#reseaux .bottom .instagram .elements h4 {
+    font-size: 28px;
+    margin: 20px;
+    background: linear-gradient(90deg, #F58529, #D1299B, #D92C5C); /* Dégradé Instagram */
+    background-clip: text;
+    color: transparent; /* Rend le texte transparent pour afficher le dégradé */
+}
+
+#reseaux .bottom .discord .elements h4 {
+    font-size: 28px;
+    margin: 20px;
+    color: #7289DA; /* Couleur Discord */
+}
+
+#reseaux .bottom .elements p {
+    font-size: 16px;
+    font-style: italic;
+    color: rgba(45, 45, 45);
+}
+
+#reseaux .bottom .instagram .elements button {
+    padding: 15px 50px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    color: whitesmoke;
+    border: 0;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #F58529, #D1299B, #D92C5C);
+    margin: 0;
+    transition: 0.5s ease;
+}
+
+#reseaux .bottom .instagram .elements button:hover  {
+    background: linear-gradient(90deg, #F58529cc, #D1299Bcc, #D92C5Ccc);    
+    transform: translateY(-5px);
+}
+
+#reseaux .bottom .discord .elements button {
+    padding: 15px 50px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    color: whitesmoke;
+    border: 0;
+    border-radius: 10px;
+    background-color: #7289DA;    
+    margin: 0;
+    transition: 0.5s;
+}
+
+#reseaux .bottom .discord .elements button:hover  {
+    background-color: rgba(100, 148, 237, 0.8);
+    transform: translateY(-5px);
+}
+
+    /* Utilité */
+
+#utility {
+    position: relative;
+}    
+
+#utility .background-forme {
+    background-image: url(images/fond.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 25% 25% 50% 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+#utility .elements {
+    display: flex;
+    justify-content: center;
+    margin: 100px 15% 0 15%;
+    
+}
+
+#utility .elements .right {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+#utility .elements .right h1 {
+    font-size: 40px;
+    color: rgb(45, 45, 45);
+}
+
+#utility .elements .right h2 {
+    font-size: 30px;
+    color: cornflowerblue;
+}
+
+#utility .elements .right .description p {
+    font-size: 20px;
+    color: gray;
+}
+
+#utility .elements .right .avis {
+    display: flex;
+    justify-content: baseline;
+    font-size: 20px;
+    color: rgb(45, 45, 45);
+}
+
+#utility .elements .right .avis p {
+    padding: 0 20px;
+}
+
+#utility .elements .right .avis p:not(:first-child) {
+    border-left: 2px solid rgb(200, 200, 200);
+}
+
+#utility .elements img {
+    flex: 1;
+}
+
+    /* Footer */
+
+footer {
+    margin-top: 100px;
+}
+
+footer .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    margin: 80px 0 40px 5%;
+}
+
+footer .container .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+}
+
+footer .container .right h2 {
+    font-size: 30px;
+    color: darkslateblue;
+}
+
+footer .container .right p {
+    font-size: 16px;
+    color: gray;
+}
+
+footer .container .right .reseaux-sociaux {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+footer .container .right .reseaux-sociaux i {
+    color: darkslateblue;
+    font-size: 20px;
+}
+
+footer .container .footer-elements h4 {
+    font-size: 20px;
+    color: rgb(45, 45, 45);
+}
+
+footer .container .footer-elements li {
+    position: relative; /* Permet de positionner le pseudo-élément */
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+footer .container .footer-elements li a {
+    text-decoration: none;
+    font-size: 16px;
+    color: gray;
+    position: relative; /* Nécessaire pour que le ::after soit bien placé */
+    padding-bottom: 5px; /* Espace sous le texte */
+}
+
+footer .container .footer-elements li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    background-color: gray;
+    transition: width 0.5s ease-in-out, left 0.5s ease-in-out;
+}
+
+footer .container .footer-elements li a:hover::after {
+    width: 100%;
+    left: 0;
+}
